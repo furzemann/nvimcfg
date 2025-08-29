@@ -15,3 +15,4 @@ require("lspconfig").rust_analyzer.setup({
 })
 
 require("lspconfig").clangd.setup({})
+require("config.floaterm")
