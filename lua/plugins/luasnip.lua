@@ -1,12 +1,11 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    version = "v2.*", -- optional
-    build = (vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0) and nil or "make install_jsregexp",
-    dependencies = { "rafamadriz/friendly-snippets" },
+    dependencies = { "saadparwaiz1/cmp_luasnip" },
     config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
+      require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets" })
     end,
   },
+
   { "rafamadriz/friendly-snippets" },
 }
